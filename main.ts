@@ -1,4 +1,18 @@
+input.onButtonPressed(Button.A, function () {
+    if (sprite.get(LedSpriteProperty.X) == 2) {
+        game.addScore(1)
+    } else {
+        game.gameOver()
+    }
+})
 input.onButtonPressed(Button.AB, function () {
+    if (sprite.get(LedSpriteProperty.X) == 2) {
+        game.addScore(1)
+    } else {
+        game.gameOver()
+    }
+})
+input.onButtonPressed(Button.B, function () {
     if (sprite.get(LedSpriteProperty.X) == 2) {
         game.addScore(1)
     } else {
