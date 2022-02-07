@@ -1,3 +1,8 @@
+input.onButtonPressed(Button.A, function () {
+    if (position == 2) {
+        points = 1
+    }
+})
 function move () {
     if (direction == 1) {
         if (position == 4) {
@@ -20,6 +25,7 @@ function move () {
         }
     }
 }
+let points = 0
 let direction = 0
 let position = 0
 position = 2
