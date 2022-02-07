@@ -1,28 +1,25 @@
-input.onButtonPressed(Button.A, function () {
-    if (sprite.get(LedSpriteProperty.X) == 2) {
-        game.addScore(1)
+function move () {
+    if (direction == 1) {
+        if (position == 4) {
+            led.unplot(position, 2)
+            position += -1
+            led.plot(position, 2)
+            direction = 0
+        }
     } else {
-        game.gameOver()
+        if (position == 0) {
+            led.unplot(position, 1)
+            position += 1
+            led.plot(position, 2)
+            direction = 0
+        } else {
+            led.unplot(position, 2)
+            position += 1
+            led.plot(position, 2)
+        }
     }
-})
-input.onButtonPressed(Button.AB, function () {
-    if (sprite.get(LedSpriteProperty.X) == 2) {
-        game.addScore(1)
-    } else {
-        game.gameOver()
-    }
-})
-input.onButtonPressed(Button.B, function () {
-    if (sprite.get(LedSpriteProperty.X) == 2) {
-        game.addScore(1)
-    } else {
-        game.gameOver()
-    }
-})
-let sprite: game.LedSprite = null
-sprite = game.createSprite(2, 2)
-basic.forever(function () {
-    sprite.move(1)
-    sprite.ifOnEdgeBounce()
-    basic.pause(200)
-})
+}
+let direction = 0
+let position = 0
+position = 2
+direction = 1
