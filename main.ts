@@ -13,9 +13,10 @@ function move () {
             led.plot(position, 2)
             direction = 0
         } else {
-            led.unplot(position, 2)
+            led.unplot(position, 0)
             position += 1
             led.plot(position, 2)
+            position = 1
         }
     }
 }
