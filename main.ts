@@ -28,5 +28,6 @@ function move () {
 let points = 0
 let direction = 0
 let position = 0
+led.plot(2, 2)
 position = 2
 direction = 1
